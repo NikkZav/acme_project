@@ -18,4 +18,15 @@
       <div class="display-1">{{ total_count }}</div>
     </div>
   </div>
+  <div>
+    <h5>Пользователи:</h5>
+    {% for user in users %}
+      <p>{{ user }}</p>
+    {% endfor %}
+  </div>
+  А ты - {{ user }}<br>
+  И ты имеешь право на: 
+  {% comment %} {% for premission in user.user_permissions %}
+    {{ premission }}<br>
+  {% endfor %} {% endcomment %}
 {% endblock %}
