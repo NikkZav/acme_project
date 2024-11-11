@@ -26,10 +26,10 @@ class HomePage(TemplateView):
         users = User.objects.all()
         context['users'] = users
 
-        user = self.request.user
-        user.refresh_from_db()
-        print(user.username)
-        print(user.user_permissions.all())
+        # user = self.request.user
+        # user.refresh_from_db()
+        # print(user.username)
+        # print(user.user_permissions.all())
 
         # Возвращаем изменённый словарь контекста.
         return context
